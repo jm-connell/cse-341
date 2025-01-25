@@ -103,9 +103,37 @@ async function updateContact(req, res) {
   }
 }
 
+async function deleteContact(req, res) {
+  try {
+    /* Connect to DB */
+    const client = await connectDB();
+
+    /* Send request to DB */
+    const result = await client
+      .db("contacts")
+      .collection("contacts")
+      .deleteOne({ _id: new ObjectId(req.params.id) });
+
+    /* Respond with 404 if contact not found */
+    if (result.deletedCount === 0) {
+      return res.status(404).json({ error: "Contact not found" });
+    }
+
+    /* Respond with 200 if delete is successful */
+    if (result.deletedCount > 0) {
+      res.status(200).json({ deletedCount: result.deletedCount });
+    }
+  } catch (error) {
+    res
+      .status(500)
+      .json({ error: "An error occurred while deleting the contact" });
+  }
+}
+
 module.exports = {
   getContacts,
   getContactById,
   createContact,
   updateContact,
+  deleteContact,
 };
