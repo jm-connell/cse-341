@@ -11,14 +11,14 @@ Content-Type: application/json
   "birthday": "1990-01-01"
 }
 ###
-PUT http://localhost:3000/contacts/6795ba4a0c53f9535f3ccde0
+PUT http://localhost:3000/contacts/
 Content-Type: application/json
 
 {
     "favoriteColor": "green"
 }
 ###
-DELETE http://localhost:3000/contacts/6795ba4a0c53f9535f3ccde0
+DELETE http://localhost:3000/contacts/
 
 // PROD Deploy
 ###
@@ -33,11 +33,11 @@ Content-Type: application/json
   "birthday": "1990-01-01"
 }
 ###
-PUT https://cse-341-rgdc.onrender.com/contacts/6795ba739a21f155e3f3cdd0
+PUT https://cse-341-rgdc.onrender.com/contacts/
 Content-Type: application/json
 
 {
     "favoriteColor": "Green"
 }
 ###
-DELETE https://cse-341-rgdc.onrender.com/contacts/6795ba739a21f155e3f3cdd0
+DELETE https://cse-341-rgdc.onrender.com/contacts/
