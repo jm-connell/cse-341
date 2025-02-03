@@ -7,7 +7,7 @@ const doc = {
     title: "My API",
     description: "CSE341 API",
   },
-  host: isProduction ? "https://cse-341-rgdc.onrender.com" : "localhost:3000",
+  host: isProduction ? "cse-341-rgdc.onrender.com" : "localhost:3000", // Remove protocol
   schemes: isProduction ? ["https"] : ["http"],
 };
 
