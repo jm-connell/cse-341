@@ -1,12 +1,14 @@
 const swaggerAutogen = require("swagger-autogen")();
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const doc = {
   info: {
     title: "My API",
-    description: "Description of my API",
+    description: "CSE341 API",
   },
-  host: "localhost:3000",
-  schemes: ["http"],
+  host: isProduction ? "https://cse-341-rgdc.onrender.com" : "localhost:3000",
+  schemes: isProduction ? ["https"] : ["http"],
 };
 
 const outputFile = "./swagger-output.json";
