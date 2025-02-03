@@ -11,14 +11,14 @@ Content-Type: application/json
   "birthday": "1990-01-01"
 }
 ###
-PUT http://localhost:3000/contacts/67994685a81dc294c123a566
+PUT http://localhost:3000/contacts/
 Content-Type: application/json
 
 {
     "favoriteColor": "green"
 }
 ###
-DELETE http://localhost:3000/contacts/67994685a81dc294c123a566
+DELETE http://localhost:3000/contacts/
 
 // PROD Deploy
 ###
@@ -26,18 +26,18 @@ POST https://cse-341-rgdc.onrender.com/contacts/create-contact
 Content-Type: application/json
 
 {
-  "firstName": "Jane",
+  "firstName": "John",
   "lastName": "Doe",
-  "email": "jane.doe@example.com",
-  "favoriteColor": "Orange",
-  "birthday": "1993-01-01"
+  "email": "john.doe@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01"
 }
 ###
-PUT https://cse-341-rgdc.onrender.com/contacts/679946ca208202cc51e5c71c
+PUT https://cse-341-rgdc.onrender.com/contacts/
 Content-Type: application/json
 
 {
     "favoriteColor": "Green"
 }
 ###
-DELETE https://cse-341-rgdc.onrender.com/contacts/679946ca208202cc51e5c71c
+DELETE https://cse-341-rgdc.onrender.com/contacts/
